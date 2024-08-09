@@ -1,0 +1,14 @@
+incoming-request-handler:
+  enabled: true
+  kafka-bootstrap-servers: localhost:29092
+  kafka-topic: application_log
+  paths: /api/*
+  filter-enabled: true
+  max-payload-size-k-bytes: 1024
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+    propagation:
+      type: b3
